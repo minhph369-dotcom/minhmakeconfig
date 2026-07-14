@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MinhMakeConfig AimLock</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    margin:0;
+}
+
+.container{
+    width:420px;
+    max-width:90%;
+    margin:50px auto;
+    background:#1f1f1f;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 20px #00bfff;
+}
+
+h1{
+    color:#00d9ff;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.btn{
+    background:#0099ff;
+    color:white;
+}
+
+.btn:hover{
+    background:#00bfff;
+}
+
+input[type=file]{
+    width:100%;
+    margin-top:15px;
+    color:white;
+}
+
+#status{
+    display:none;
+    color:#ff0000;
+    font-size:20px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+</style>
+
+<script>
+
+function success(name){
+
+    var status=document.getElementById("status");
+
+    status.innerHTML="✔ "+name+" Thành Công";
+
+    status.style.display="block";
+
+    setTimeout(function(){
+
+        status.style.display="none";
+
+    },2000);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>MinhMakeConfig AimLock</h1>
+
+<button class="btn" onclick="success('HeadLock')">
+HeadLock
+</button>
+
+<button class="btn" onclick="success('Hỗ Trợ Kéo')">
+Hỗ Trợ Kéo
+</button>
+
+<button class="btn" onclick="success('AimNeck')">
+AimNeck
+</button>
+
+<div id="status"></div>
+
+<br><br>
+
+<input type="file" accept=".mobileconfig,.plist">
+
+<br><br>
+
+<a href="https://www.icloud.com/shortcuts/520e30df83e24a3591c6f86951cd86c2">
+<button class="btn" type="button">
+Truy cập Phím Tắt
+</button>
+</a>
+
+</div>
+
+</body>
+</html>
