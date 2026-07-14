@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chèn File Cấu Hình</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-200 p-6">
+
+<div class="max-w-xl mx-auto">
+
+    <div class="bg-white rounded-lg p-4 shadow-md mb-6">
+
+        <h2 class="text-2xl font-bold text-center mb-4">
+            Chèn File Cấu Hình
+        </h2>
+
+        <input
+            type="file"
+            id="configFile"
+            accept=".mobileconfig,.plist,.json,.txt"
+            class="block w-full border rounded-lg p-3">
+
+        <p id="fileName"
+           class="mt-4 text-green-600 text-lg font-semibold text-center">
+            Chưa chọn file
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById("configFile").addEventListener("change", function () {
+
+    if (this.files.length > 0) {
+
+        document.getElementById("fileName").innerHTML =
+            "Đã chọn: <b>" + this.files[0].name + "</b>";
+
+    } else {
+
+        document.getElementById("fileName").innerHTML =
+            "Chưa chọn file";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
