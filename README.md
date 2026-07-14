@@ -1,2 +1,0 @@
-# minhmakeconfig
-MinhMakeConfig Uy Tín 
